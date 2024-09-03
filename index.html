@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(38, 28, 47);
+            color: white;
+        }
+
+        nav {
+            background-color: rgb(130, 21, 145);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        .classleft {
+            font-size: 2rem;
+        }
+
+        .Firstsection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 0 7%;
+        }
+
+        .leftsection {
+
+            font-size: 3rem;
+
+
+        }
+
+        .Firstsection>div {
+            width: 40%;
+            margin: 5%
+        }
+
+        .rightsection img {
+            width: 100%;
+        }
+
+        .p {
+            color: purple;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+
+
+        nav ul li a:hover {
+            color: aquamarine;
+            font-size: 1.04rem;
+            width: 100%;
+        }
+
+        main hr {
+            border: 0;
+            background: #9c97f1;
+            height: 1.2px;
+            margin: 40px 84px;
+        }
+
+        #element {
+            color: purple;
+        }
+
+        .secondsection {
+            max-width: 80vw;
+            margin: auto;
+        }
+
+        .secondsection h1 {
+            font-size: 2.5rem;
+        }
+
+        .gray {
+            color: gray;
+        }
+
+        .col-1 {
+            width: 20%;
+            height: 20%;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+
+        }
+
+        .aboutsection {
+            max-width: 80vw;
+            margin: auto;
+        }
+
+        .aboutsection h1 {
+            color: white;
+            font-size: 2.5rem;
+            margin: auto;
+
+        }
+
+        .ul img {
+            height: 100px;
+            width: 100px;
+        }
+
+        #about {
+            padding: 60px 0;
+            color: #ababab;
+        }
+
+        .col-1 {
+            flex-basis: 35%;
+
+        }
+
+        .col-1 img {
+            width: 100%;
+            border-radius: 15px;
+
+        }
+
+        .col-2 {
+            flex-basis: 50%;
+
+        }
+
+        .subtitle {
+            font-size: 3.5rem;
+            font-weight: 600;
+            color: purple;
+        }
+
+        .title {
+            display: flex;
+            margin: 20px 0 40px;
+            font-size: 2.5rem;
+            color: white;
+        }
+
+        .link {
+            margin-right: 50px;
+            font-size: 3rem;
+            font-weight: 500;
+            cursor: pointer;
+            position: relative;
+            color: purple;
+        }
+
+        .link::after {
+            content: '';
+            width: 0;
+            height: 3px;
+            background: #ff004f;
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            transition: 0.5s;
+        }
+
+        .exp {
+            font-size: 3rem;
+            color: purple;
+        }
+
+        .sub-title {
+            display: flex;
+            margin: 40px 0 40px;
+            font-size: 4rem;
+            color: white;
+            margin-left: 550px;
+        }
+
+        .pro1 {
+            margin: 90px;
+            font-size: 2rem;
+            color: purple;
+            padding: 40px;
+
+        }
+
+        .Lms {
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .r {
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .pro1>div {
+            border: 2px solid rgb(37, 7, 74);
+            height: 100%;
+            box-sizing: border-box;
+            padding: 1rem;
+            text-align: center;
+            color: purple;
+            box-shadow: 0 0 50px 15px #48abe0;
+        }
+
+        .r span {
+            color: purple;
+            font-size: 2rem;
+        }
+
+        .S {
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .content ul li {
+            color: white;
+        }
+
+        .edu ul li {
+            color: white;
+        }
+
+        .ccc {
+            margin-right: 60px;
+        }
+
+        .E span {
+            font-size: 2rem;
+            color: purple;
+
+        }
+
+        .E {
+            font-size: 1.5rem;
+            color: white;
+            margin-left: 80px;
+        }
+
+        .P span {
+            font-size: 2rem;
+            color: purple;
+        }
+
+        .P {
+            font-size: 1.5rem;
+            color: white;
+            margin-left: 80px;
+        }
+        .contact-left{
+            flex-basis: 35%;
+        }
+        .contact-right{
+            flex-basis: 65%;
+        }
+        
+        .btn{
+            margin-left: 80px;
+            background-color: blueviolet;
+            border-radius: 5%;
+            font-size: 1rem;
+
+        }
+        .ff{
+             margin-left: 700px;
+           
+        }
+    form input, form textarea{
+       width: 50%;
+       border: 0;
+       outline: none;
+       background: #44043b;
+       padding: 15px;
+       margin: 15px 0;
+       color: black;
+       font-size: 18px;
+       border-radius: 6px;
+       
+      
+
+   }
+   .contact-right form{
+    margin-bottom: 50px;
+   }
+   .btn2
+   {
+    background-color: purple;
+    border-radius: 6px;
+    margin-top: 20px;
+   }
+   .copyright{
+    margin-left: 500px;
+    font-size: 2rem;
+    color: purple;
+   }
+   
+
+    
+   
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="classleft">Ranjeet's Portfolio</div>
+            <div class="classright">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="about">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="Firstsection">
+            <div class="leftsection">
+                Hi,My name is <span class="p">Ranjeet</span>
+                <div>And i am a passionate</div>
+
+                <span id="element"></span>
+            </div>
+            <div class="rightsection">
+                <img src="bg.png" alt="">
+            </div>
+
+
+        </section>
+
+        <hr>
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-1">
+                        <img src="meme.png" alt="">
+                    </div>
+
+                    <div class="col-2">
+                        <h1 class="subtitle">About Me</h1>
+                        <p class="S">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia magni vel aperiam
+                            iure
+                            laboriosam repellat mollitia esse perferendis tempore, enim dolorem sunt ad vitae hic sint
+                            ea sed eum autem.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia magni vel
+                            aperiam iure
+                            laboriosam repellat mollitia esse perferendis tempore, enim dolorem sunt ad vitae hic sint
+                            ea sed eum autem.</p>
+                        <div class="title">
+                            <p class="link">Skills</p>
+
+
+
+                        </div>
+                        <div class="content">
+                            <ul>
+                                <li><span>Languages</span><br>C, C++, Python, Java</li>
+                                <li>Data Structures and Algorithm</li>
+                                <li>DatBase Management Syatem</li>
+                                <li>Html, CSS ,JS</li>
+                                <li>Structued Query Language</li>
+
+                            </ul>
+                        </div><br><br>
+                        <div class="exp">Education</div><br>
+                        <div class="edu">
+                            <ul>
+                                <li><span>Btech in Computer Science</span><br>Graphic Era Hill University,Dehradun
+                                    <br>Year (2021-2025)
+                                </li>
+                                <li><span>12th Board (Bihar Board)</span><br>Girish Narayan Mishra Intercollege, Patna
+                                    <br>Year (2020)
+                                </li>
+                                <li><span>10th Board (CBSE Boar)</span><br>D.A.V Public School, Mohaniya
+                                    <br>year (2018)
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div id="projects">
+            <div class="container">
+                <h1 class="sub-title">My Projects</h1>
+                <div class="pro1">
+                    <div>
+                        <h2>1st. Library Managenet System</h2><br>
+                        <p class="r"><span>Tech. Used: </span>HTML, CSS JS<br><span>About:</span> A library management
+                            system is
+                            software that is designed to manage all the functions of a library. It helps librarian to
+                            maintain the database of new books and the books that are borrowed by members along with
+                            their due dates.A library management system is used to maintain library records. It tracks
+                            the records of the number of books in the library, how many books are issued, or how many
+                            books have been returned or renewed or late fine charges, etc.<br><span>Project Link:</span>
+                            <a href="https://github.com/Rpatel847/Restaurent_System"> LMS</a>
+                        </p>
+                    </div>
+
+                </div>
+                <br>
+                <div class="pro1">
+                    <div>
+                        <h2>2nd. Restaurant Website</h2><br>
+                        <p class="r"><span>Tech. Used: </span>HTML, CSS JS<br><span>About:</span> Created a restaurent
+                            site which will tell things like the menu , the chefs , the quality of food and the ambience
+                            a particular restaurent will provide.<br><span>Project Link:</span> <a
+                                href="https://github.com/Rpatel847/Restaurent_System"> Restaurant</a></p>
+                    </div>
+
+                </div>
+                <br>
+                <div class="pro1">
+                    <div>
+                        <h2>3rd. Portfolio Website</h2><br>
+                        <p class="r"><span>Tech. Used: </span>HTML, CSS JS<br><span>About:</span> Created a Portfolio
+                            Website of Myself. The site will tell everything about me like what is my name, where m i
+                            ifrom and the skills that i have abd the places from where i have completed my education.
+                            The site will also tell about the project that i have created.nd you can contact me as well
+                            thorugh this site.<br><span>Project Link:</span> <a
+                                href="https://github.com/Rpatel847/Restaurent_System"> Portfolio</a></p>
+                    </div>
+
+
+                </div>
+                <br>
+                <div class="pro1">
+                    <div>
+                        <h2>4th. SideBar_Menu</h2><br>
+                        <p class="r"><span>Tech. Used: </span>HTML, CSS JS<br><span>About:</span> Created a sipme
+                            website of sidebar menu using core html, css. <br><span>Project Link:</span> <a
+                                href="https://github.com/Rpatel847/Restaurent_System"> SideBar_Menu</a></p>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+            <hr>
+            <div id="contact">
+                <div class="container">
+                    <div class="throw">
+                        <div class="contact-left">
+                            <h1 class="sub-title">Contact Me</h1>
+                            <p class="E"><span>Email : </span> ranjeet23032001@gmail.com</p><br>
+                            <p class="P"><span>Phone No : </span> 6200763373</p>
+                            <div>
+                               
+                                <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+                                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                                <a href=""><i class="fa-brands fa-square-twitter"></i></a>
+                                
+                            </div><br>
+                            <br>
+                            <a href="my_resume (1).pdf" download="How-to-download-file.pdf">
+                                <button class="btn">Download CV</button>
+                            </a>
+                        </div>
+                        <div class="contact-right">
+                            <form class="ff">
+                                <input type="text" name="Name" placeholder="Your Name" required>
+                                <input type="text" name="Email" placeholder="Your Email" required>
+                                <textarea name="Message" rows="6" placeholder="your message"></textarea>
+                                <button class="btn2" type="submit">Submit</button>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>copyright Made with<i class="fa-solid fa-heart"></i> from Ranjeet Patel</p>
+            </div>
+
+    </main>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer', 'Web Designer', 'Coder'],
+            typeSpeed: 50,
+        });
+    </script>
+
+</body>
+
+</html>
